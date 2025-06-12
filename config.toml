@@ -1,0 +1,177 @@
+baseURL = "https://blog.ahmgam.com/"
+title = "Ahmed Gamal"
+languageCode = "en-us"
+defaultContentLanguage = "en-us"
+author = "Ahmed Gamal"
+copyright = " 2025, Ahmed Gamal."
+
+# Theme
+theme = "beargn"
+
+# Basic Site Parameters
+[params]
+description = "A collection of notes about software, programming and personal thoughts."
+favicon = "images/favicon/favicon-192.png"
+hideMadeWithLine = true
+dateFormat = "2006-01-02"
+mainSections = ["posts", "links"]
+toc = false
+tocOpen = false
+rssFeedDescription = "full"
+
+# Output configuration
+publishDir = "public"
+
+# Author Details
+[params.author]
+avatar = "avatar.jpg"
+intro = "Ahmed Gamal"
+name = "Ahmed Gamal"
+description = "An Engineer, programmer, and lifelong learner sharing insights on software, programming and hardware."
+
+# Webmanifest Configuration
+[params.webmanifest]
+name = "Ahmed Gamal's Blog"
+short_name = "Ahmed Gamal"
+start_url = "/"
+theme_color = "#434648"
+background_color = "#fff"
+display = "standalone"
+
+# Social Icons
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/ahmgam"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "/feeds/"
+
+# SEO and Output Configuration
+enableRobotsTXT = true
+[services.rss]
+limit = 15
+[outputs]
+home = ["HTML", "RSS", "POSTS_RSS", "ALL_POSTS_RSS", "ALL_CONTENT_RSS"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "index"
+
+[outputFormats.POSTS_RSS]
+mediatype = "application/rss+xml"
+baseName = "posts"
+relativeURLs = true
+path = ""
+
+[outputFormats.ALL_POSTS_RSS]
+mediatype = "application/rss+xml"
+baseName = "all-posts"
+relativeURLs = true
+path = ""
+
+[outputFormats.ALL_CONTENT_RSS]
+mediatype = "application/rss+xml"
+baseName = "all-content"
+relativeURLs = true
+path = ""
+
+# Pagination Settings
+paginate = 15
+paginatePath = "page"
+
+# File Ignoring Patterns During Site Generation
+ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$"]
+
+# Permalinks
+[permalinks]
+posts = "/:slug/"
+micro = "/:slug/"
+links = "/:slug/"
+tags = "/posts/:slug"
+
+# Markup Settings
+[markup]
+  [markup.highlight]
+    # Set to true to enable syntax highlighting
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    hl_inline = false
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false
+    anchorLineNo = false
+    noClasses = false
+    # style = "emacs"
+    tabWidth = 4
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+# Sass configuration
+[build]
+writeStats = true
+
+[build.buildStats]
+enable = true
+
+# Asset configuration
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "themes/beargn/assets"
+target = "assets"
+
+[security]
+[security.funcs]
+getenv = ['^HUGO_']
+
+[security.http]
+methods = ['(?i)GET|POST']
+urls = ['.*']
+
+# Menu Configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "micro"
+    name = "micro"
+    url = "/micro/"
+    weight = 3
+  [[menu.main]]
+    identifier = "links"
+    name = "links"
+    url = "/links/"
+    weight = 4
+
+# Footer Configuration
+[params.footer]
+text = " Ahmed Gamal | Created by human, not by AI"
+
+# Social Links
+[params.social]
+github = "https://github.com/ahmgam"
+rss = "/index.xml"

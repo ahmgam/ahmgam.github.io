@@ -1,0 +1,14 @@
+project:
+  type: hugo
+
+#prefer-html: true
+
+format: 
+  hugo-md:
+    code-fold: true
+    html-math-method: webtex
+
+execute: 
+  warning: false
+
+biliography: references.lib
