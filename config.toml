@@ -140,7 +140,7 @@ source = "static"
 target = "static"
 
 [[module.mounts]]
-source = "themes/beargn/assets"
+source = "themes/PaperMod/assets"
 target = "assets"
 
 [security]
