@@ -1,4 +1,4 @@
 +++
-title = "Posts"
+title = "المقالات"
 layout = "posts-list"
 +++

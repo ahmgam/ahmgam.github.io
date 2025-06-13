@@ -2,8 +2,8 @@
 title: "Home"
 ---
 
-# A word about me,
-I'm a young software engineer, I work as full stack developer at Gen-Tech Company
+# من أنا؟
+أنا هيمانوف  ، مهندس برمجيات، أفكر وأكتب. أهلا بك في مدونتي.
 
 ---
 

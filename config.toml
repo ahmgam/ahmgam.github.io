@@ -1,16 +1,18 @@
 baseURL = "https://blog.ahmgam.com/"
-title = "Ahmed Gamal"
-languageCode = "en-us"
-defaultContentLanguage = "en-us"
-author = "Ahmed Gamal"
-copyright = " 2025, Ahmed Gamal."
+title = "Himanov"
+defaultContentLanguage = "ar"
+languageCode = "ar-EG"
+languageName = "Arabic"
+languageDirection = "rtl"
+contentDir = "content"
+author = "Himanov"
+copyright = " 2025, Himanov."
 
 # Theme
-theme = "beargn"
+theme = "PaperMod"
 
 # Basic Site Parameters
 [params]
-description = "A collection of notes about software, programming and personal thoughts."
 favicon = "images/favicon/favicon-192.png"
 hideMadeWithLine = true
 dateFormat = "2006-01-02"
@@ -18,25 +20,32 @@ mainSections = ["posts", "links"]
 toc = false
 tocOpen = false
 rssFeedDescription = "full"
+hideAuthor = false
+ShowReadingTime = false
 
 # Output configuration
 publishDir = "public"
 
-# Author Details
-[params.author]
-avatar = "avatar.jpg"
-intro = "Ahmed Gamal"
-name = "Ahmed Gamal"
-description = "An Engineer, programmer, and lifelong learner sharing insights on software, programming and hardware."
 
 # Webmanifest Configuration
 [params.webmanifest]
-name = "Ahmed Gamal's Blog"
-short_name = "Ahmed Gamal"
+name = "Himanov's Blog"
+short_name = "Himanov"
 start_url = "/"
 theme_color = "#434648"
 background_color = "#fff"
 display = "standalone"
+
+# Language Configuration
+[languages]
+  [languages.ar]
+    languageCode = "ar-EG"
+    languageName = "العربية"
+    languageDirection = "rtl"
+    weight = 1
+    title = "Himanov"
+    [languages.ar.params]
+      description = "مجموعة من الملاحظات حول البرمجيات والبرمجة والأفكار الشخصية"
 
 # Social Icons
 [[params.socialIcons]]
@@ -94,7 +103,6 @@ tags = "/posts/:slug"
 # Markup Settings
 [markup]
   [markup.highlight]
-    # Set to true to enable syntax highlighting
     codeFences = true
     guessSyntax = true
     hl_Lines = ""
@@ -104,7 +112,6 @@ tags = "/posts/:slug"
     lineNumbersInTable = false
     anchorLineNo = false
     noClasses = false
-    # style = "emacs"
     tabWidth = 4
 
   [markup.goldmark.renderer]
@@ -148,28 +155,37 @@ urls = ['.*']
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "home"
+    name = "الرئيسية"
     url = "/"
     weight = 1
   [[menu.main]]
     identifier = "posts"
-    name = "posts"
+    name = "المقالات"
     url = "/posts/"
     weight = 2
   [[menu.main]]
-    identifier = "micro"
-    name = "micro"
+    identifier = "تغريدات"
+    name = " التغريدات"
     url = "/micro/"
     weight = 3
   [[menu.main]]
     identifier = "links"
-    name = "links"
+    name = "الروابط"
     url = "/links/"
     weight = 4
-
+  [[menu.main]]
+    identifier = "tags"
+    name = "المواضيع"
+    url = "/tags/"
+    weight = 5
+  [[menu.main]]
+    identifier = "feeds"
+    name = "RSS"
+    url = "/feeds/"
+    weight = 6
 # Footer Configuration
 [params.footer]
-text = " Ahmed Gamal | Created by human, not by AI"
+text = " Himanov | ي"
 
 # Social Links
 [params.social]
